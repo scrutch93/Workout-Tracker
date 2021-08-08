@@ -19,7 +19,7 @@ module.exports = (app) => {
   });
 
   // If no matching route is found default to home
-  app.get('*', (req, res) => {
+  app.get('stats', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/stats.html'));
   });
 };
