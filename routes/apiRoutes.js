@@ -25,9 +25,14 @@ module.exports = (app) => {
           })
     })
 
-    app.put ('/api/workouts/:id', (req, res))
+    app.put ('/api/workouts/:id', (req, res) =>{
+    db.Workout.add (req).then (dbWorkout => {
+         res.json(db(workout))
+        }
+        )}
 
 
+    )
 }
 
 
